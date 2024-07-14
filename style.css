@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    position: relative;
+}
+
+#backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    user-drag: none; /* Prevent image dragging */
+    user-select: none; /* Prevent text selection */
+    -webkit-user-drag: none; /* Prevent image dragging for WebKit browsers */
+    -webkit-user-select: none; /* Prevent text selection for WebKit browsers */
+}
+
+canvas#WaterTexture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none; /* Ensure canvas is non-interactive */
+}
